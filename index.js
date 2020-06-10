@@ -1,3 +1,8 @@
-const _ = require('underscore');
+const express = require('express');
+const app = express();
 
-_.contains([1,2,3], 2);
+app.get('/', function(req, res){
+  res.send('Hello World');
+});
+
+app.listen(3000, () => console.log("It's over anakin. I have the high port"));
