@@ -1,3 +1,4 @@
+const config = require('config');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const Joi = require('joi');
