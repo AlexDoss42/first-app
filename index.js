@@ -13,6 +13,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
 app.use(helmet());
 
+console.log('Application Name: ' + config.get('name'));
+console.log('Mail Sever: ' + config.get('mail.host'))
+
 if(app.get('env') === 'development') {
   app.use(morgan('tiny'));
   console.log('Morgan enabled...');
