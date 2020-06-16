@@ -20,8 +20,10 @@ console.log('Mail Sever: ' + config.get('mail.host'))
 
 if(app.get('env') === 'development') {
   app.use(morgan('tiny'));
-  console.log('Morgan enabled...');
+  startupDebugger('Morgan enabled...');
 };
+
+dbDebugger('Connected to the database...');
 
 app.use(function(req, res, next){
   console.log("logging...");
