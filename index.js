@@ -40,7 +40,7 @@ const courses =[
 ]
 
 app.get('/', function(req, res){
-  res.send('Hello World');
+  res.render('index', {title: 'My Express APP', message: 'Hello there...'});
 });
 
 app.get('/api/courses', (req, res) => {
