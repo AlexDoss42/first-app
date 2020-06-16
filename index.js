@@ -1,5 +1,7 @@
 const config = require('config');
 const helmet = require('helmet');
+const startupDebugger = require('debug')('app:startup');
+const dbDebugger = require('debug')('app:db');
 const morgan = require('morgan');
 const Joi = require('joi');
 const express = require('express');
