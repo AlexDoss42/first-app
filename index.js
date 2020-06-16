@@ -7,6 +7,9 @@ const Joi = require('joi');
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 app.get('env');
 
